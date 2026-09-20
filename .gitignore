@@ -45,6 +45,11 @@ data/_tmp_pdf/
 pageindex_doc_ids.json
 pageindex_pdfs/
 
+# Supplementary football statistics and latest crawl report (news stays in news/)
+data/landing/football/
+data/standardized/football/
+data/football_crawl_report.json
+
 # Jupyter
 .ipynb_checkpoints/
 

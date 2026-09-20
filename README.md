@@ -43,6 +43,36 @@ pytest -q
 streamlit run app.py
 ```
 
+## Thu thập dữ liệu bóng đá
+
+Task 1 (`src/task1_collect_legal_docs.py`) tải 3 PDF gốc về luật IFAB, kỷ luật
+VFF và điều lệ V.League vào `data/landing/legal/`, kèm metadata nguồn và SHA-256:
+
+```bash
+python -m src.task1_collect_legal_docs
+```
+
+Trên Windows: `.\collect_legal_docs.ps1`. Xem
+[hướng dẫn Task 1](docs/TASK1_LEGAL_DOCS.md) để biết phiên bản và cách chạy lại.
+
+Task 2 (`src/task2_crawl_news.py`) thu thập dữ liệu bóng đá bằng thư viện chuẩn
+Python, không cần API key:
+
+```bash
+python -m src.task2_crawl_news
+```
+
+Trên Windows có launcher tự chọn Python: `.\crawl_football.ps1`.
+
+Lấy tin RSS, lịch/kết quả, đội bóng, bảng xếp hạng và danh sách cầu thủ ghi bàn.
+Mặc định lấy Bundesliga mùa hiện tại. Tin tức lưu JSON trực tiếp trong
+`data/landing/news/` và Markdown trong `data/standardized/news/` theo cấu trúc
+đề bài. Dữ liệu bổ sung về trận đấu, đội và cầu thủ lưu trong các thư mục
+`data/landing/football/` và `data/standardized/football/`.
+Có thể chọn giải/mùa và nhóm dữ liệu.
+Xem [hướng dẫn crawler bóng đá](docs/FOOTBALL_CRAWLER.md) để biết lệnh chạy,
+phạm vi dữ liệu và cách kiểm tra. Các bước index/chatbot vẫn cần triển khai theo bài tập.
+
 ## Lộ trình 3 giờ
 
 | Mốc                  | Thời gian | Kết quả cần có                           |
