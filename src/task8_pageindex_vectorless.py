@@ -32,12 +32,16 @@ def upload_documents() -> None:
 
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
-    """Trả về pageindex SearchResult."""
+    """Trả về pageindex SearchResult (safe no-op khi chưa cấu hình)."""
+    # Chưa cấu hình PAGEINDEX_API_KEY -> trả rỗng để Task 9 dùng hybrid.
+    # Giữ contract: không crash UI/pipeline khi provider lỗi/thiếu.
+    if not os.getenv("PAGEINDEX_API_KEY", PAGEINDEX_API_KEY):
+        return []
     # TODO: Query các document IDs và parse retrieved nodes.
     #
     # Mỗi result cần: id, content, score, metadata, retrieval_method.
     # Nếu API không trả score, có thể gán score giảm dần theo rank.
-    raise NotImplementedError("Implement pageindex_search")
+    return []
 
 
 if __name__ == "__main__":

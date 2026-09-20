@@ -13,6 +13,7 @@ dependencies = [
     "chromadb>=0.5.0,<2",
     "crawl4ai==0.9.3",
     "datasets>=4.0.0,<6",
+    "fastapi>=0.110,<1",
     "fpdf2>=2.7.0,<3",
     "google-genai>=1.0.0,<3",
     "langchain-community==0.4.1",
