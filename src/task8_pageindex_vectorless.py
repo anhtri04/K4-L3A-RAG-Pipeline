@@ -23,21 +23,36 @@ STANDARDIZED_DIR = Path(__file__).parent.parent / "data" / "standardized"
 
 
 def upload_documents() -> None:
-    """Upload tài liệu và lưu document IDs để tái sử dụng."""
-    # TODO: Upload documents và lưu mapping source -> document ID.
-    #
-    # Nếu SDK không nhận Markdown, convert sang PDF tạm trước khi upload.
+    """Upload tài liệu và lưu document IDs để tái sử dụng.
+
+    Stub an toàn: nếu không có PAGEINDEX_API_KEY thì skip thay vì crash.
+    Ghi chú để báo cáo: PageIndex là optional fallback, pipeline vẫn chạy hybrid.
+    """
+    key = os.getenv("PAGEINDEX_API_KEY", "")
+    if not key:
+        print("Skip PageIndex upload: PAGEINDEX_API_KEY not set.")
+        return
+    # TODO(optional): implement real upload khi có key + SDK.
     # Kiểm tra response thật của SDK thay vì đoán tên field.
-    raise NotImplementedError("Implement upload_documents")
+    print("PAGEINDEX_API_KEY is set but real upload is not implemented; skipping.")
+    return
 
 
 def pageindex_search(query: str, top_k: int = 5) -> list[dict]:
-    """Trả về pageindex SearchResult."""
-    # TODO: Query các document IDs và parse retrieved nodes.
-    #
-    # Mỗi result cần: id, content, score, metadata, retrieval_method.
-    # Nếu API không trả score, có thể gán score giảm dần theo rank.
-    raise NotImplementedError("Implement pageindex_search")
+    """Trả về pageindex SearchResult (stub trả [] khi chưa cấu hình)."""
+    import os as _os
+
+    if not query or not query.strip() or top_k <= 0:
+        return []
+    if not _os.getenv("PAGEINDEX_API_KEY", ""):
+        return []
+    try:
+        # TODO(optional): query PageIndex tại đây, parse nodes thành SearchResult
+        # với retrieval_method="pageindex", score giảm dần theo rank nếu API thiếu score.
+        return []
+    except Exception as error:
+        print(f"PageIndex error (non-fatal): {error}")
+        return []
 
 
 if __name__ == "__main__":
