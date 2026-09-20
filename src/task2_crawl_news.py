@@ -20,26 +20,36 @@ from pathlib import Path
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
+# Football topic — 6 URLs (cần >=5 thành công). Đã verify HTTP 200 bằng curl.
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://en.wikipedia.org/wiki/Offside_(association_football)",
+    "https://en.wikipedia.org/wiki/Association_football_tactics_and_skills",
+    "https://en.wikipedia.org/wiki/VAR_(football)",
+    "https://www.theifab.com/laws-of-the-game-documents",
+    "https://www.premierleague.com/news/4183910",
+    "https://www.fifa.com/en/articles/laws-of-the-game-changes-2024-25",
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    """Crawl 1 URL bằng Crawl4AI, trả về dict đúng schema acceptance test."""
+    from datetime import datetime, timezone
+
+    from crawl4ai import AsyncWebCrawler
+
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+        markdown = (getattr(result, "markdown", "") or "").strip()
+        if not markdown:
+            raise RuntimeError(f"Empty markdown for {url}")
+        metadata = getattr(result, "metadata", {}) or {}
+        title = metadata.get("title") or url
+        return {
+            "url": url,
+            "title": str(title).strip(),
+            "date_crawled": datetime.now(timezone.utc).isoformat(),
+            "content_markdown": markdown,
+        }
 
 
 async def crawl_all() -> None:
