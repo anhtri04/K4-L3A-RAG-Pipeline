@@ -1,5 +1,4 @@
-"""Streamlit interface for the football RAG pipeline."""
-
+from pathlib import Path
 from urllib.parse import urlparse
 
 import streamlit as st
@@ -7,6 +6,10 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
+
+ROOT_DIR = Path(__file__).parent
+BANNER_IMAGE = ROOT_DIR / "assets" / "ronaldo_messi_banner.png"
+CHESS_IMAGE = ROOT_DIR / "assets" / "ronaldo_messi_chess.png"
 
 SAFE_REFUSAL = "Tôi không thể xác minh thông tin này từ nguồn hiện có."
 
@@ -92,6 +95,8 @@ if "message_sequence" not in st.session_state:
     st.session_state.message_sequence = 0
 
 with st.sidebar:
+    if CHESS_IMAGE.exists():
+        st.image(str(CHESS_IMAGE), use_container_width=True, caption="Chiến lược & Trí tuệ bóng đá")
     st.title("⚽ Football RAG")
     st.caption(
         "Hỏi đáp trên bộ tài liệu về quản trị, an toàn, bóng đá nữ và "
@@ -103,6 +108,9 @@ with st.sidebar:
         st.session_state.messages = []
         st.session_state.selected_source = None
         st.rerun()
+
+if BANNER_IMAGE.exists():
+    st.image(str(BANNER_IMAGE), use_container_width=True)
 
 st.title("⚽ Football RAG Chatbot")
 st.caption(
