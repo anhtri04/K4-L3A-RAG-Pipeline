@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What is the primary role of the Independent Football Regulator (IFR) established by the Football Governance Act 2025?",
+    "expected_answer": "The Independent Football Regulator (IFR) is established to safeguard English football's financial sustainability, ensure clubs are properly managed, apply statutory Owners' and Directors' Tests, protect club heritage (such as badges, home shirts, and stadium moves), prevent breakaway closed-shop leagues, and ensure fair financial distribution across the football pyramid.",
+    "expected_context": "The Act will create the Independent Football Regulator (IFR), which will mark the biggest reform to football governance in a generation – helping to protect clubs across the country. Tough new financial regulation to improve resilience across the football pyramid to ensure clubs are sustainable for the long term."
+  },
+  {
+    "question": "What triggered the political and legislative momentum behind the Fan-Led Review of Football Governance?",
+    "expected_answer": "The attempted breakaway European Super League and high-profile financial collapses of historic clubs such as Bury FC and Macclesfield Town triggered the review.",
+    "expected_context": "The Act follows a long journey to law, which began following the attempted breakaway European Super League, and a series of high-profile cases of clubs facing financial ruin including Bury and Macclesfield Town."
+  },
+  {
+    "question": "What key powers does the IFR possess regarding rogue club owners?",
+    "expected_answer": "The IFR has stronger statutory Owners' and Directors' Tests to assess club custodians, ensure no illicit financing, and powers to force rogue owners to divest or sell their stakes in the club.",
+    "expected_context": "Stronger, statutory Owners' and Directors' Tests to make sure club custodians are suitable and aren't using illicit finances with powers to force rogue owners to sell up."
+  },
+  {
+    "question": "How does the Football Governance Act protect club heritage assets?",
+    "expected_answer": "The Act introduces statutory protections preventing clubs from changing historic home shirt colours, badges, or relocating stadiums without genuine supporter engagement and regulatory approval.",
+    "expected_context": "New statutory protections for key club heritage aspects like home shirt colours and club badges and stadium moves."
+  },
+  {
+    "question": "What is the main message of the UK grassroots sport concussion guidance published in 2023?",
+    "expected_answer": "The guidance promotes the principle 'If in doubt, sit them out', advising immediate removal from play for anyone with suspected concussion and safe graduated return to sport protocols.",
+    "expected_context": "Landmark concussion guidance for grassroots sport published advising participants, coaches, and parents to follow the 'if in doubt, sit them out' rule to protect player safety."
+  },
+  {
+    "question": "What was the key recommendation from Karen Carney's review on women's football?",
+    "expected_answer": "The review recommended raising minimum standards, creating a fully professional environment for the top tiers, increasing broadcast revenue, and establishing a dedicated company to run the Women's Super League and Women's Championship.",
+    "expected_context": "Government backs Karen Carney's blueprint to raise standards in domestic women's football, reframing the opportunity and driving commercial investment and professionalism across the women's game."
+  },
+  {
+    "question": "What did the research on erroneous offside calls in soccer discover regarding assistant referee errors?",
+    "expected_answer": "The study found that offside errors are systematic, often influenced by optical illusion (optical error/perspective angle) where assistant referees tend to call flag errors more frequently when players are moving in opposite directions at high speed.",
+    "expected_context": "Evaluating erroneous offside calls in soccer: analysis demonstrates perceptual biases, viewing angle limitations, and flash-lag effects that affect assistant referees' decision accuracy in real time."
+  },
+  {
+    "question": "How do advanced Expected Goals (xG) models improve upon basic shot distance and angle metrics?",
+    "expected_answer": "Advanced xG models incorporate defender proximity, goalkeeper positioning, shot type (foot vs header), pre-shot pass characteristics, and body orientation using machine learning techniques.",
+    "expected_context": "Predicting goal probabilities with improved xG models incorporates spatial tracking data, defensive pressure, passing velocity, and machine learning models like gradient boosted trees to enhance precision."
+  },
+  {
+    "question": "What perceptual-cognitive skills are identified as crucial for talent development in young soccer players?",
+    "expected_answer": "Anticipation, visual scanning frequency, pattern recognition, and decision-making under time pressure are critical perceptual-cognitive skills that distinguish elite youth talents.",
+    "expected_context": "Perceptual-cognitive skills and talent development environments in soccer: elite youth players demonstrate superior visual search behaviors, head-turn frequencies, and contextual game awareness."
+  },
+  {
+    "question": "What data sources are utilized by machine learning algorithms to forecast injuries in soccer players?",
+    "expected_answer": "They use GPS tracking data (high-speed running, acceleration, deceleration, total distance), acute-to-chronic workload ratios, neuromuscular fatigue indicators, and past injury history.",
+    "expected_context": "Effective injury forecasting in soccer with GPS training data and machine learning combines multivariate time-series features of external training load with physiological recovery status."
+  },
+  {
+    "question": "What does 'Significant Influence or Control' (SIC) mean in the statutory guidance for club governance?",
+    "expected_answer": "It refers to an individual or entity holding substantial voting rights, shareholding (typically 25% or more), board appointment powers, or the factual power to direct club policy and operational decisions.",
+    "expected_context": "Statutory Guidance About the Meaning of 'Significant Influence or Control' sets objective criteria for shareholding, debt leverage, governance agreements, and shadow director arrangements in football clubs."
+  },
+  {
+    "question": "Why did the Fan-Led Review recommend an independent regulator rather than industry self-regulation?",
+    "expected_answer": "Because existing football authorities had conflicting incentives and failed to prevent catastrophic insolvency, debt accumulation, or protect lower-tier clubs from financial vulnerability.",
+    "expected_context": "The Fan-Led Review concluded that self-regulation within English football had failed due to misaligned incentives between wealthy clubs and the rest of the football pyramid, necessitating independent oversight."
+  },
+  {
+    "question": "What is the backstop power of the Independent Football Regulator concerning financial distribution?",
+    "expected_answer": "If leagues (e.g., Premier League and EFL) fail to agree on a fair financial distribution formula, the Regulator has backstop powers to arbitrate and enforce a binding revenue distribution settlement.",
+    "expected_context": "Backstop powers to ensure a fair financial distribution between leagues if the commercial negotiations between the Premier League and the English Football League fail to reach agreement."
+  },
+  {
+    "question": "What are the recommended rest periods for grassroots athletes suspected of suffering a concussion?",
+    "expected_answer": "Grassroots athletes should have a minimum rest period of at least 14 days before returning to competitive contact play, following a symptom-free gradual progression protocol.",
+    "expected_context": "Under the UK grassroots concussion guidelines, players with suspected concussion must rest immediately, avoid screens and physical exertion, and follow a structured graduated return to play of at least 14 days."
+  },
+  {
+    "question": "What is the Shadow Football Regulator's function during the transition phase?",
+    "expected_answer": "The Shadow Football Regulator engages with fans, clubs, and leagues, drafts initial licensing frameworks, and prepares operational structures ahead of the formal launch of the IFR.",
+    "expected_context": "A transition team, the Shadow Football Regulator, was established in 2024 to lead this process and is already engaging widely with industry and fan groups before implementing the new regime."
+  }
+]
