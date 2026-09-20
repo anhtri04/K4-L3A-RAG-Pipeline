@@ -34,6 +34,7 @@ htmlcov/
 .env
 .env.*
 !.env.example
+.streamlit/secrets.toml
 
 # Temp PDF conversion cache
 data/_tmp_pdf/
@@ -42,6 +43,7 @@ data/_tmp_pdf/
 .pytest_cache/
 *.tmp
 *.log
+chroma_db/
 pageindex_doc_ids.json
 pageindex_pdfs/
 

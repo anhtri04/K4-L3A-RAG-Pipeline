@@ -1,0 +1,3627 @@
+{
+  "schema_version": "1.0",
+  "run_info": {
+    "evaluated_at_utc": "2026-09-20T10:25:12+00:00",
+    "git_commit": "eb1d6cc",
+    "corpus_sha256": "421f57dfa5f937a5d3421759d63a8a9eeb04fda1c81a8310bf5d9ed55fce5771",
+    "embedding": "hash-blake2b-unigram-bigram-v1 (1024 dimensions)",
+    "generator": "deterministic-extractive-v1",
+    "evaluator": "deterministic-lexical-evidence-proxy-v1",
+    "document_count": 12,
+    "chunk_count": 2656,
+    "golden_size": 23,
+    "top_k": 5,
+    "candidate_k": 10,
+    "dense_backend": "exact-numpy-cosine-over-task4-embeddings",
+    "api_cost_usd": 0.0
+  },
+  "metric_definitions": {
+    "context_recall": "Fraction of human-authored evidence anchors whose content-token recall is at least 0.60 in the concatenated top-k context.",
+    "context_precision": "Fraction of top-k chunks from an expected source that cover at least 0.35 of one evidence anchor's content tokens.",
+    "faithfulness": "Fraction of extractive answer sentences found verbatim in their cited chunks, multiplied by citation validity; zero for an empty answer.",
+    "answer_relevance": "Content-token F1 between the deterministic extractive answer and the human-authored expected answer."
+  },
+  "configs": {
+    "dense_only": {
+      "aggregate": {
+        "context_recall": 0.4638,
+        "context_precision": 0.2957,
+        "faithfulness": 1.0,
+        "answer_relevance": 0.1914,
+        "average": 0.4877,
+        "mean_latency_ms": 2.53
+      },
+      "cases": [
+        {
+          "id": "gov-01",
+          "question": "What are the Independent Football Regulator's three primary objectives?",
+          "answer": "The IFR will have 3 primary objectives. [3] PART 2: The Independent Football Regulator [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3,
+            "context_recall": 0.3333,
+            "context_precision": 0.0
+          },
+          "average": 0.4083,
+          "latency_ms": 4.5,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-162",
+              "score": 0.294118,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 162
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-207",
+              "score": 0.294118,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 207
+              }
+            },
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-3",
+              "score": 0.273781,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-10",
+              "score": 0.267625,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 10
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-136",
+              "score": 0.244336,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 136
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-02",
+          "question": "How many English football clubs did the 2023 White Paper expect the regulator to license, and which tiers were covered?",
+          "answer": "3 In this White Paper, ‘English football’ refers to the top five tiers of the English men’s football pyramid [3] for English football clubs.3 It will be a Regulator that is free from the vested [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.4242,
+            "context_recall": 1.0,
+            "context_precision": 0.4
+          },
+          "average": 0.7061,
+          "latency_ms": 2.0,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-183",
+              "score": 0.300119,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 183
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-63",
+              "score": 0.282227,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 63
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-65",
+              "score": 0.27988,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 65
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-33",
+              "score": 0.266724,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 33
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-61",
+              "score": 0.260742,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 61
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-03",
+          "question": "What three elements make up the strengthened owners' and directors' tests proposed for English football?",
+          "answer": "Statutory, strengthened owners’ and directors’ tests to make sure a club’s custodians are suitable and protect fans from irresponsible owners.** [1] Chapter 4 – Tests for Owners and Directors of Football Clubs [4]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.2222,
+            "context_recall": 1.0,
+            "context_precision": 0.4
+          },
+          "average": 0.6556,
+          "latency_ms": 2.18,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-13",
+              "score": 0.31835,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 13
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-825",
+              "score": 0.312464,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 825
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-335",
+              "score": 0.287529,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 335
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-395",
+              "score": 0.285653,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 395
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-421",
+              "score": 0.27906,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 421
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-04",
+          "question": "What supporter protections apply when a regulated club wants to change its crest, home shirt colours, or club name?",
+          "answer": "New statutory protections for key club heritage aspects like home shirt colours and club badges and stadium moves [1] the badge and home shirt colours, in addition to the strong existing protections for [5]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.186,
+            "context_recall": 0.6667,
+            "context_precision": 0.0
+          },
+          "average": 0.4632,
+          "latency_ms": 2.98,
+          "retrieved": [
+            {
+              "id": "news/01_football_governance_act_2025.md::chunk-13",
+              "score": 0.230424,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "01_football_governance_act_2025.json",
+                "title": "Football Governance Act becomes law in historic moment for English football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/football-governance-act-becomes-law-in-historic-moment-for-english-football",
+                "chunk_index": 13
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-70",
+              "score": 0.208076,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 70
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-256",
+              "score": 0.205236,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 256
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-242",
+              "score": 0.20063,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 242
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-43",
+              "score": 0.200143,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 43
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-05",
+          "question": "On what grounds would the regulator assess a proposed stadium sale or relocation?",
+          "answer": "any sale or relocation of the stadium. [1] the Regulator would also need to consider the impact of a stadium sale on its [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.32,
+            "context_recall": 0.6667,
+            "context_precision": 0.0
+          },
+          "average": 0.4967,
+          "latency_ms": 2.01,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-367",
+              "score": 0.326575,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 367
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-259",
+              "score": 0.293466,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 259
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-393",
+              "score": 0.292788,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 393
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-336",
+              "score": 0.2886,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 336
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-355",
+              "score": 0.277649,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 355
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-06",
+          "question": "When may the IFR use its backstop power over broadcast-revenue distribution?",
+          "answer": "The IFR will prepare and publish a State of the Game report assessing the industry, guidance on its regulatory regime, and an annual report on its activities over the past year: [1] The IFR will have 3 primary objectives. [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1176,
+            "context_recall": 0.0,
+            "context_precision": 0.2
+          },
+          "average": 0.3294,
+          "latency_ms": 1.85,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-24",
+              "score": 0.186774,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 24
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-541",
+              "score": 0.168833,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 541
+              }
+            },
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-3",
+              "score": 0.158476,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-47",
+              "score": 0.156236,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 47
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-80",
+              "score": 0.150628,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 80
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-07",
+          "question": "Which club competitions can the regulator prevent English clubs from joining?",
+          "answer": "This will allow the Regulator to prevent English clubs from joining [2] Prevent English clubs from joining breakaway or unlicensed leagues.** [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3846,
+            "context_recall": 1.0,
+            "context_precision": 0.2
+          },
+          "average": 0.6462,
+          "latency_ms": 2.36,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-20",
+              "score": 0.307173,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 20
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-44",
+              "score": 0.297056,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 44
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-394",
+              "score": 0.227388,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 394
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-208",
+              "score": 0.227208,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 208
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-183",
+              "score": 0.224052,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 183
+              }
+            }
+          ]
+        },
+        {
+          "id": "safety-01",
+          "question": "What does the UK grassroots concussion guidance mean by 'Recognise, Remove, Return', and how soon may a suspected player return to sport?",
+          "answer": "‘If in doubt, sit them out’ is the strapline, making clear no-one should return to sport within 24 hours of a suspected concussion and builds on guidance already introduced in Scotland. [1] “Based on the pragmatic, precautionary approach to immediate concussion management of ‘if in doubt, sit them out’, followed by an emphasis on individualised, self-managed return to normal life and sport, these guidelines set the standard for grassroots concussion management that all sports across the UK will follow.” [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3,
+            "context_recall": 1.0,
+            "context_precision": 0.4
+          },
+          "average": 0.675,
+          "latency_ms": 1.93,
+          "retrieved": [
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-7",
+              "score": 0.266618,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 7
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-188",
+              "score": 0.241477,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 188
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-19",
+              "score": 0.237752,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 19
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-223",
+              "score": 0.237569,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 223
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-8",
+              "score": 0.227673,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "safety-02",
+          "question": "What immediate health advice does the grassroots concussion guidance give after a potential concussion?",
+          "answer": "Landmark concussion guidance for grassroots sport published [4] title: \"Landmark concussion guidance for grassroots sport published\" [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 2.88,
+          "retrieved": [
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-25",
+              "score": 0.226168,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 25
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-0",
+              "score": 0.215402,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 0
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-196",
+              "score": 0.207036,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 196
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-3",
+              "score": 0.178512,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-93",
+              "score": 0.174296,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 93
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-01",
+          "question": "What did the Karen Carney review recommend for the Women's Super League and Women's Championship professional environment?",
+          "answer": "Clubs within the Women's Super League and Women's Championship will be [2] The FA conducted an ownership review of the Women's Super League and the Women's [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 1.85,
+          "retrieved": [
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-48",
+              "score": 0.342496,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 48
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-84",
+              "score": 0.279191,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 84
+              }
+            },
+            {
+              "id": "news/04_womens_football_standards_blueprint_2023.md::chunk-18",
+              "score": 0.268562,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "04_womens_football_standards_blueprint_2023.json",
+                "title": "Government backs Karen Carney's blueprint to raise standards in domestic women's football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/government-backs-karen-carneys-blueprint-to-raise-standards-in-domestic-womens-football",
+                "chunk_index": 18
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-65",
+              "score": 0.259043,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 65
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-131",
+              "score": 0.255469,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 131
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-02",
+          "question": "What new grassroots investment was announced to prioritise women's and girls' football teams?",
+          "answer": "To achieve this ambition, last week the Government announced a £30 million cash injection with The FA to build approximately 30 new state-of-the-art 3G pitches and accompanying facilities designed to prioritise women’s and girls’ teams across England. [1] The Review also asked the Government to increase meaningful investment in grassroots facilities for women and girls to improve access and participation. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.5333,
+            "context_recall": 1.0,
+            "context_precision": 0.2
+          },
+          "average": 0.6833,
+          "latency_ms": 1.75,
+          "retrieved": [
+            {
+              "id": "news/04_womens_football_standards_blueprint_2023.md::chunk-9",
+              "score": 0.290279,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "04_womens_football_standards_blueprint_2023.json",
+                "title": "Government backs Karen Carney's blueprint to raise standards in domestic women's football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/government-backs-karen-carneys-blueprint-to-raise-standards-in-domestic-womens-football",
+                "chunk_index": 9
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-196",
+              "score": 0.2462,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 196
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-216",
+              "score": 0.23307,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 216
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-14",
+              "score": 0.229418,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 14
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-728",
+              "score": 0.209588,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 728
+              }
+            }
+          ]
+        },
+        {
+          "id": "offside-01",
+          "question": "What error rates did the offside study observe below and above a 40-degree visual angle?",
+          "answer": "They are inconsistent, however, with the lack of a relationship between visual angle and error rates in the only other study to examine offside calls as a function of visual angle ] [2] Yet, only one previous study has explored the role of visual angle and consequently the role of the players’ separation in error rates ]. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0714,
+            "context_recall": 0.5,
+            "context_precision": 1.0
+          },
+          "average": 0.6429,
+          "latency_ms": 3.11,
+          "retrieved": [
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-15",
+              "score": 0.319643,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 15
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-39",
+              "score": 0.289414,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 39
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-79",
+              "score": 0.238314,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 79
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-19",
+              "score": 0.224086,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 19
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-20",
+              "score": 0.222346,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 20
+              }
+            }
+          ]
+        },
+        {
+          "id": "offside-02",
+          "question": "Why did the offside study suggest assistant referees could sometimes make fewer errors when farther from the players?",
+          "answer": "Counterintuitively, our findings suggest that assistant referees might make more accurate calls if they were positioned further away from the action; from a more distant vantage point the relevant players in an offside call would be separated by a smaller visual angle, making it possible for the assistant referee to attend to the relevant players simultaneously [2] Counterintuitively, assistant referees made fewer errors when they were farther away from the action due to an advantageous (smaller) visual angle on the game action [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3188,
+            "context_recall": 1.0,
+            "context_precision": 0.8
+          },
+          "average": 0.7797,
+          "latency_ms": 3.22,
+          "retrieved": [
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-4",
+              "score": 0.318773,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 4
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-88",
+              "score": 0.250876,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 88
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-79",
+              "score": 0.229954,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 79
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-90",
+              "score": 0.228608,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 90
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-40",
+              "score": 0.225401,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 40
+              }
+            }
+          ]
+        },
+        {
+          "id": "analytics-01",
+          "question": "Which event-sequence length gave the best validation performance in the improved xG study, and what were its scores?",
+          "answer": "in the best position to assess the merits of such a bid in the round i.e. [4] For example, most visual search fixation behaviour research has been conducted in laboratory settings, making it difficult (even with applied recommendations), for practitioners to assess its direct applicability to real-world soccer performance [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0426,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.2606,
+          "latency_ms": 3.3,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-694",
+              "score": 0.25827,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 694
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-71",
+              "score": 0.252066,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 71
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-120",
+              "score": 0.240784,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 120
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-401",
+              "score": 0.240056,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 401
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-218",
+              "score": 0.238133,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 218
+              }
+            }
+          ]
+        },
+        {
+          "id": "analytics-02",
+          "question": "Which attacking sequences did the improved xG model associate with better scoring chances?",
+          "answer": "Furthermore, the analysis of xG visualizations and model features, revealed that passes originating from the sides of the goal within the 18-yard box in preceding events tend to create higher scoring chances compared to shots built up from passes originating from the central zone outside the box. [3] Can patterns of event sequences that improve scoring chances be identified across games? [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3077,
+            "context_recall": 1.0,
+            "context_precision": 0.4
+          },
+          "average": 0.6769,
+          "latency_ms": 2.65,
+          "retrieved": [
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-2",
+              "score": 0.259973,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-37",
+              "score": 0.175953,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 37
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-161",
+              "score": 0.16171,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 161
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-159",
+              "score": 0.153981,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 159
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-121",
+              "score": 0.14832,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 121
+              }
+            }
+          ]
+        },
+        {
+          "id": "talent-01",
+          "question": "How many studies were included in the soccer perceptual-cognitive scoping review, and what main themes did it identify?",
+          "answer": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review [1] Following PRISMA guidelines, specific inclusion and exclusion criteria were set, where 55 studies were included in the final review [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.2286,
+            "context_recall": 0.25,
+            "context_precision": 0.2
+          },
+          "average": 0.4196,
+          "latency_ms": 2.44,
+          "retrieved": [
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-2",
+              "score": 0.295918,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-4",
+              "score": 0.280179,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 4
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-595",
+              "score": 0.225233,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 595
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-592",
+              "score": 0.220301,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 592
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-100",
+              "score": 0.210383,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 100
+              }
+            }
+          ]
+        },
+        {
+          "id": "talent-02",
+          "question": "How does the review define scanning in soccer, and which positive performance outcomes are linked to it?",
+          "answer": "and energy has gone into consideration of the contributions which have been made to the Review [1] Review, the football industry has been considering how it can reform. [5]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 2.3,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-21",
+              "score": 0.242828,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 21
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-677",
+              "score": 0.23542,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 677
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-549",
+              "score": 0.231762,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 549
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-173",
+              "score": 0.228996,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 173
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-466",
+              "score": 0.228991,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 466
+              }
+            }
+          ]
+        },
+        {
+          "id": "injury-01",
+          "question": "What players, observation period, training sessions, and injuries formed the injury-forecasting study dataset?",
+          "answer": "The length of the data collection period depends on the club’s needs and strategy, including the frequency of training sessions and games, the frequency of injuries, the number of available players and the tolerated level of false alarms. [1] At training week *w* i we first construct the dataset T [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1778,
+            "context_recall": 0.0,
+            "context_precision": 0.4
+          },
+          "average": 0.3944,
+          "latency_ms": 2.16,
+          "retrieved": [
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-95",
+              "score": 0.230257,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 95
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-145",
+              "score": 0.2,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 145
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-75",
+              "score": 0.199762,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 75
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-70",
+              "score": 0.191086,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 70
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-50",
+              "score": 0.190574,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 50
+              }
+            }
+          ]
+        },
+        {
+          "id": "injury-02",
+          "question": "What precision and recall did the decision-tree injury forecaster achieve on the injury class?",
+          "answer": "Note that, for injury forecasting purposes, we are interested in achieving high values of precision and recall on class 1 (injury) [2] We report precision (prec), recall (rec), F1-score (F1) and Area Under the Curve (AUC) for the injury class and the non- injury class for all the predictors based on ACWR and MSWR. [5]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1739,
+            "context_recall": 0.3333,
+            "context_precision": 1.0
+          },
+          "average": 0.6268,
+          "latency_ms": 2.66,
+          "retrieved": [
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-93",
+              "score": 0.354734,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 93
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-59",
+              "score": 0.319211,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 59
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-74",
+              "score": 0.264055,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 74
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-72",
+              "score": 0.260061,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 72
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-113",
+              "score": 0.257824,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 113
+              }
+            }
+          ]
+        },
+        {
+          "id": "ownership-01",
+          "question": "Which formal ownership thresholds are listed in Schedule 1 guidance under the Football Governance Act 2025?",
+          "answer": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025 [1] Issued under Part 2 of Schedule 1 to the Football [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 2.7,
+          "retrieved": [
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-2",
+              "score": 0.384648,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-71",
+              "score": 0.334698,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 71
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-9",
+              "score": 0.288067,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 9
+              }
+            },
+            {
+              "id": "news/01_football_governance_act_2025.md::chunk-5",
+              "score": 0.274268,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "01_football_governance_act_2025.json",
+                "title": "Football Governance Act becomes law in historic moment for English football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/football-governance-act-becomes-law-in-historic-moment-for-english-football",
+                "chunk_index": 5
+              }
+            },
+            {
+              "id": "news/01_football_governance_act_2025.md::chunk-3",
+              "score": 0.262232,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "01_football_governance_act_2025.json",
+                "title": "Football Governance Act becomes law in historic moment for English football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/football-governance-act-becomes-law-in-historic-moment-for-english-football",
+                "chunk_index": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "ownership-02",
+          "question": "Can someone with less than 25 percent of a club still be treated as an owner under the significant-influence guidance?",
+          "answer": "and key activities of a club like an owner typically can, can be considered an owner. [3] Conditions 2 to 4, they would still be considered as an owner. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1905,
+            "context_recall": 0.6667,
+            "context_precision": 0.4
+          },
+          "average": 0.5643,
+          "latency_ms": 2.71,
+          "retrieved": [
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-65",
+              "score": 0.283351,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 65
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-566",
+              "score": 0.273717,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 566
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-53",
+              "score": 0.258288,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 53
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-379",
+              "score": 0.247451,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 379
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-85",
+              "score": 0.241118,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 85
+              }
+            }
+          ]
+        },
+        {
+          "id": "supporters-01",
+          "question": "Which club decisions would require supporter consent under the Fan-Led Review's proposed Golden Share?",
+          "answer": "Regulator to require every club to introduce a ‘Golden Share’. [4] articles of association a Golden Share requiring democratic consent to proposed [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1026,
+            "context_recall": 0.25,
+            "context_precision": 0.8
+          },
+          "average": 0.5381,
+          "latency_ms": 2.25,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-85",
+              "score": 0.251405,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 85
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-807",
+              "score": 0.231528,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 807
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-586",
+              "score": 0.2141,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 586
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-390",
+              "score": 0.211186,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 390
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-559",
+              "score": 0.211033,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 559
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-03",
+          "question": "What minimum contact-time and salary-floor milestones did the government response support for the top two tiers of women's football?",
+          "answer": "the top five tiers of men’s football and the top two tiers of women’s football. [1] In the Government Response to the Fan-Led Review of Football Governance [5]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 2.41,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-396",
+              "score": 0.373506,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 396
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-723",
+              "score": 0.308102,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 723
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-61",
+              "score": 0.275277,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 61
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-134",
+              "score": 0.267334,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 134
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-60",
+              "score": 0.26445,
+              "retrieval_method": "dense",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 60
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid_rrf": {
+      "aggregate": {
+        "context_recall": 0.5471,
+        "context_precision": 0.3652,
+        "faithfulness": 1.0,
+        "answer_relevance": 0.2214,
+        "average": 0.5334,
+        "mean_latency_ms": 160.99
+      },
+      "cases": [
+        {
+          "id": "gov-01",
+          "question": "What are the Independent Football Regulator's three primary objectives?",
+          "answer": "The IFR will have 3 primary objectives. [1] PART 2: The Independent Football Regulator [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3,
+            "context_recall": 1.0,
+            "context_precision": 0.0
+          },
+          "average": 0.575,
+          "latency_ms": 131.07,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-3",
+              "score": 0.032266,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-162",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 162
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-207",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 207
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-138",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 138
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-32",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 32
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-02",
+          "question": "How many English football clubs did the 2023 White Paper expect the regulator to license, and which tiers were covered?",
+          "answer": "3 In this White Paper, ‘English football’ refers to the top five tiers of the English men’s football pyramid [1] for English football clubs.3 It will be a Regulator that is free from the vested [4]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.4242,
+            "context_recall": 1.0,
+            "context_precision": 0.6
+          },
+          "average": 0.7561,
+          "latency_ms": 128.47,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-65",
+              "score": 0.031746,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 65
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-61",
+              "score": 0.031514,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 61
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-183",
+              "score": 0.031099,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 183
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-63",
+              "score": 0.031054,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 63
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-552",
+              "score": 0.030331,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 552
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-03",
+          "question": "What three elements make up the strengthened owners' and directors' tests proposed for English football?",
+          "answer": "Statutory, strengthened owners’ and directors’ tests to make sure a club’s custodians are suitable and protect fans from irresponsible owners.** [1] The tests will consist of 3 key elements: a fitness test (owners and directors), a source of wealth test (owners only), and a requirement for financial plans and resources (owners only). [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3673,
+            "context_recall": 1.0,
+            "context_precision": 0.4
+          },
+          "average": 0.6918,
+          "latency_ms": 129.63,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-13",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 13
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-335",
+              "score": 0.032002,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 335
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-793",
+              "score": 0.029644,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 793
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-382",
+              "score": 0.029211,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 382
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-825",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 825
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-04",
+          "question": "What supporter protections apply when a regulated club wants to change its crest, home shirt colours, or club name?",
+          "answer": "New statutory protections for key club heritage aspects like home shirt colours and club badges and stadium moves [1] first team home shirt club colours; and [4]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1951,
+            "context_recall": 0.6667,
+            "context_precision": 0.0
+          },
+          "average": 0.4654,
+          "latency_ms": 157.28,
+          "retrieved": [
+            {
+              "id": "news/01_football_governance_act_2025.md::chunk-13",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "01_football_governance_act_2025.json",
+                "title": "Football Governance Act becomes law in historic moment for English football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/football-governance-act-becomes-law-in-historic-moment-for-english-football",
+                "chunk_index": 13
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-43",
+              "score": 0.031258,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 43
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-86",
+              "score": 0.030303,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 86
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-567",
+              "score": 0.029199,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 567
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-70",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 70
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-05",
+          "question": "On what grounds would the regulator assess a proposed stadium sale or relocation?",
+          "answer": "any sale or relocation of the stadium. [1] the Regulator would also need to consider the impact of a stadium sale on its [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.32,
+            "context_recall": 1.0,
+            "context_precision": 0.2
+          },
+          "average": 0.63,
+          "latency_ms": 313.7,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-367",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 367
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-259",
+              "score": 0.032258,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 259
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-393",
+              "score": 0.031025,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 393
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-43",
+              "score": 0.02967,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 43
+              }
+            },
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-20",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 20
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-06",
+          "question": "When may the IFR use its backstop power over broadcast-revenue distribution?",
+          "answer": "Introduce a backstop power to intervene in the distribution of broadcast revenue where necessary (subject to certain thresholds being met).** [4] The IFR will prepare and publish a State of the Game report assessing the industry, guidance on its regulatory regime, and an annual report on its activities over the past year: [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3111,
+            "context_recall": 0.6667,
+            "context_precision": 0.4
+          },
+          "average": 0.5944,
+          "latency_ms": 109.52,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-24",
+              "score": 0.032018,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 24
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-47",
+              "score": 0.031498,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 47
+              }
+            },
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-3",
+              "score": 0.030366,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-22",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 22
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-541",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 541
+              }
+            }
+          ]
+        },
+        {
+          "id": "gov-07",
+          "question": "Which club competitions can the regulator prevent English clubs from joining?",
+          "answer": "This will allow the Regulator to prevent English clubs from joining [2] Prevent English clubs from joining breakaway or unlicensed leagues.** [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3846,
+            "context_recall": 1.0,
+            "context_precision": 0.2
+          },
+          "average": 0.6462,
+          "latency_ms": 162.54,
+          "retrieved": [
+            {
+              "id": "news/02_independent_football_regulator_fact_sheet_2024.md::chunk-20",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "02_independent_football_regulator_fact_sheet_2024.json",
+                "title": "Fact sheet - the Independent Football Regulator (IFR)",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/publications/football-governance-bill-supporting-documents/fact-sheet-the-independent-football-regulator-ifr",
+                "chunk_index": 20
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-44",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 44
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-394",
+              "score": 0.031746,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 394
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-208",
+              "score": 0.03125,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 208
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-82",
+              "score": 0.029644,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 82
+              }
+            }
+          ]
+        },
+        {
+          "id": "safety-01",
+          "question": "What does the UK grassroots concussion guidance mean by 'Recognise, Remove, Return', and how soon may a suspected player return to sport?",
+          "answer": "“This guidance will help everyone involved in grassroots sport recognise the signs of concussion and remove people from play where necessary. [5] ‘If in doubt, sit them out’ is the strapline, making clear no-one should return to sport within 24 hours of a suspected concussion and builds on guidance already introduced in Scotland. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.4444,
+            "context_recall": 1.0,
+            "context_precision": 0.6
+          },
+          "average": 0.7611,
+          "latency_ms": 174.31,
+          "retrieved": [
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-7",
+              "score": 0.032018,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 7
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-8",
+              "score": 0.031778,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 8
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-19",
+              "score": 0.031258,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 19
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-17",
+              "score": 0.031054,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 17
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-21",
+              "score": 0.030159,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 21
+              }
+            }
+          ]
+        },
+        {
+          "id": "safety-02",
+          "question": "What immediate health advice does the grassroots concussion guidance give after a potential concussion?",
+          "answer": "Landmark concussion guidance for grassroots sport published [2] title: \"Landmark concussion guidance for grassroots sport published\" [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 185.41,
+          "retrieved": [
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-0",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 0
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-3",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 3
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-17",
+              "score": 0.031545,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 17
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-25",
+              "score": 0.031319,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 25
+              }
+            },
+            {
+              "id": "news/03_grassroots_sport_concussion_guidance_2023.md::chunk-4",
+              "score": 0.030798,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "03_grassroots_sport_concussion_guidance_2023.json",
+                "title": "Landmark concussion guidance for grassroots sport published",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/landmark-concussion-guidance-for-grassroots-sport-published",
+                "chunk_index": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-01",
+          "question": "What did the Karen Carney review recommend for the Women's Super League and Women's Championship professional environment?",
+          "answer": "Clubs within the Women's Super League and Women's Championship will be [2] The FA conducted an ownership review of the Women's Super League and the Women's [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 199.75,
+          "retrieved": [
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-48",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 48
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-84",
+              "score": 0.032002,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 84
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-131",
+              "score": 0.031514,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 131
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-175",
+              "score": 0.030118,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 175
+              }
+            },
+            {
+              "id": "news/04_womens_football_standards_blueprint_2023.md::chunk-18",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "04_womens_football_standards_blueprint_2023.json",
+                "title": "Government backs Karen Carney's blueprint to raise standards in domestic women's football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/government-backs-karen-carneys-blueprint-to-raise-standards-in-domestic-womens-football",
+                "chunk_index": 18
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-02",
+          "question": "What new grassroots investment was announced to prioritise women's and girls' football teams?",
+          "answer": "To achieve this ambition, last week the Government announced a £30 million cash injection with The FA to build approximately 30 new state-of-the-art 3G pitches and accompanying facilities designed to prioritise women’s and girls’ teams across England. [1] The Review also asked the Government to increase meaningful investment in grassroots facilities for women and girls to improve access and participation. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.5333,
+            "context_recall": 1.0,
+            "context_precision": 0.2
+          },
+          "average": 0.6833,
+          "latency_ms": 162.36,
+          "retrieved": [
+            {
+              "id": "news/04_womens_football_standards_blueprint_2023.md::chunk-9",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "04_womens_football_standards_blueprint_2023.json",
+                "title": "Government backs Karen Carney's blueprint to raise standards in domestic women's football",
+                "doc_type": "news",
+                "url": "https://www.gov.uk/government/news/government-backs-karen-carneys-blueprint-to-raise-standards-in-domestic-womens-football",
+                "chunk_index": 9
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-14",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 14
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-734",
+              "score": 0.030579,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 734
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-726",
+              "score": 0.029437,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 726
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-196",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 196
+              }
+            }
+          ]
+        },
+        {
+          "id": "offside-01",
+          "question": "What error rates did the offside study observe below and above a 40-degree visual angle?",
+          "answer": "They are inconsistent, however, with the lack of a relationship between visual angle and error rates in the only other study to examine offside calls as a function of visual angle ] [2] Yet, only one previous study has explored the role of visual angle and consequently the role of the players’ separation in error rates ]. [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0714,
+            "context_recall": 0.5,
+            "context_precision": 1.0
+          },
+          "average": 0.6429,
+          "latency_ms": 148.92,
+          "retrieved": [
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-15",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 15
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-39",
+              "score": 0.032258,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 39
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-79",
+              "score": 0.031746,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 79
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-20",
+              "score": 0.03031,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 20
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-73",
+              "score": 0.030118,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 73
+              }
+            }
+          ]
+        },
+        {
+          "id": "offside-02",
+          "question": "Why did the offside study suggest assistant referees could sometimes make fewer errors when farther from the players?",
+          "answer": "Counterintuitively, our findings suggest that assistant referees might make more accurate calls if they were positioned further away from the action; from a more distant vantage point the relevant players in an offside call would be separated by a smaller visual angle, making it possible for the assistant referee to attend to the relevant players simultaneously [2] Assistant referees make errors on approximately 20–26% of offside calls –], and many factors contribute to such errors (see ]). [4]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3235,
+            "context_recall": 1.0,
+            "context_precision": 0.6
+          },
+          "average": 0.7309,
+          "latency_ms": 182.59,
+          "retrieved": [
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-4",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 4
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-88",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 88
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-40",
+              "score": 0.031514,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 40
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-11",
+              "score": 0.030366,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 11
+              }
+            },
+            {
+              "id": "news/05_offside_calls_research_2017.md::chunk-90",
+              "score": 0.030331,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "05_offside_calls_research_2017.json",
+                "title": "Evaluating erroneous offside calls in soccer",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174358",
+                "chunk_index": 90
+              }
+            }
+          ]
+        },
+        {
+          "id": "analytics-01",
+          "question": "Which event-sequence length gave the best validation performance in the improved xG study, and what were its scores?",
+          "answer": "From , it was observed that ROC-AUC values improved and brier scores values decreased gradually up to inclusion of three events (shot event and two preceding events to the shot event) indicating an improvement in model performance. [4] The highest mean xG (high xG) cluster received a mean xG score of 0.742, while the lowest mean xG cluster(low xG) and the other cluster (mid xG) received mean xG scores of 0.120 and 0.388, respectively. [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.3429,
+            "context_recall": 0.6667,
+            "context_precision": 0.2
+          },
+          "average": 0.5524,
+          "latency_ms": 175.23,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-694",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 694
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-123",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 123
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-71",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 71
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-101",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 101
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-120",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 120
+              }
+            }
+          ]
+        },
+        {
+          "id": "analytics-02",
+          "question": "Which attacking sequences did the improved xG model associate with better scoring chances?",
+          "answer": "Can patterns of event sequences that improve scoring chances be identified across games? [1] The xG values were then analyzed to identify sequence patterns that enhance scoring chances [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0909,
+            "context_recall": 0.3333,
+            "context_precision": 0.4
+          },
+          "average": 0.4561,
+          "latency_ms": 160.63,
+          "retrieved": [
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-37",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 37
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-2",
+              "score": 0.031545,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-121",
+              "score": 0.031514,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 121
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-159",
+              "score": 0.03055,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 159
+              }
+            },
+            {
+              "id": "news/06_expected_goals_models_2024.md::chunk-150",
+              "score": 0.029437,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "06_expected_goals_models_2024.json",
+                "title": "Predicting goal probabilities with improved xG models using event sequences in association football",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312278",
+                "chunk_index": 150
+              }
+            }
+          ]
+        },
+        {
+          "id": "talent-01",
+          "question": "How many studies were included in the soccer perceptual-cognitive scoping review, and what main themes did it identify?",
+          "answer": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review [1] Following PRISMA guidelines, specific inclusion and exclusion criteria were set, where 55 studies were included in the final review [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.2286,
+            "context_recall": 0.25,
+            "context_precision": 0.4
+          },
+          "average": 0.4696,
+          "latency_ms": 170.57,
+          "retrieved": [
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-2",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-4",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 4
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-27",
+              "score": 0.029644,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 27
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-50",
+              "score": 0.029199,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 50
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-595",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 595
+              }
+            }
+          ]
+        },
+        {
+          "id": "talent-02",
+          "question": "How does the review define scanning in soccer, and which positive performance outcomes are linked to it?",
+          "answer": "Beyond scanning actions, fixation behaviours (i.e., what players are looking at) pre, concurrent, and post action-execution are crucial to understanding soccer player’s visual search capabilities ]. [4] By identifying how scanning abilities progress from early development to professional levels, practitioners can better support players in refining scanning behaviours, ultimately enhancing long-term development outcomes ,]. [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0625,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.2656,
+          "latency_ms": 148.15,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-21",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 21
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-71",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 71
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-677",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 677
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-73",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 73
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-549",
+              "score": 0.015873,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 549
+              }
+            }
+          ]
+        },
+        {
+          "id": "injury-01",
+          "question": "What players, observation period, training sessions, and injuries formed the injury-forecasting study dataset?",
+          "answer": "The length of the data collection period depends on the club’s needs and strategy, including the frequency of training sessions and games, the frequency of injuries, the number of available players and the tolerated level of false alarms. [1] From the features extracted from GPS data, which are described in , we construct a training dataset *T* consisting of 55 features and 952 examples (i.e., individual training sessions). [4]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1786,
+            "context_recall": 0.25,
+            "context_precision": 0.6
+          },
+          "average": 0.5071,
+          "latency_ms": 146.19,
+          "retrieved": [
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-95",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 95
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-75",
+              "score": 0.031746,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 75
+              }
+            },
+            {
+              "id": "news/07_soccer_talent_development_review_2025.md::chunk-145",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "07_soccer_talent_development_review_2025.json",
+                "title": "Perceptual-cognitive skills and talent development environments in soccer: A scoping review",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327721",
+                "chunk_index": 145
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-46",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 46
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-70",
+              "score": 0.015625,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 70
+              }
+            }
+          ]
+        },
+        {
+          "id": "injury-02",
+          "question": "What precision and recall did the decision-tree injury forecaster achieve on the injury class?",
+          "answer": "Note that, for injury forecasting purposes, we are interested in achieving high values of precision and recall on class 1 (injury) [1] We report precision (prec), recall (rec), F1-score (F1) and Area Under the Curve (AUC) for the injury class and the non- injury class for all the predictors based on ACWR and MSWR. [3]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1739,
+            "context_recall": 0.3333,
+            "context_precision": 1.0
+          },
+          "average": 0.6268,
+          "latency_ms": 131.34,
+          "retrieved": [
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-59",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 59
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-93",
+              "score": 0.031319,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 93
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-113",
+              "score": 0.031258,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 113
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-72",
+              "score": 0.030777,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 72
+              }
+            },
+            {
+              "id": "news/08_soccer_injury_forecasting_ml_2018.md::chunk-114",
+              "score": 0.03055,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "08_soccer_injury_forecasting_ml_2018.json",
+                "title": "Effective injury forecasting in soccer with GPS training data and machine learning",
+                "doc_type": "news",
+                "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0201264",
+                "chunk_index": 114
+              }
+            }
+          ]
+        },
+        {
+          "id": "ownership-01",
+          "question": "Which formal ownership thresholds are listed in Schedule 1 guidance under the Football Governance Act 2025?",
+          "answer": "bespoke guidance is for the purposes of the Football Governance Act and the [5] Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025 [1]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.0
+          },
+          "average": 0.25,
+          "latency_ms": 143.41,
+          "retrieved": [
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-2",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 2
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-9",
+              "score": 0.032002,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 9
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-71",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 71
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-0",
+              "score": 0.030798,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 0
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-10",
+              "score": 0.029211,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "ownership-02",
+          "question": "Can someone with less than 25 percent of a club still be treated as an owner under the significant-influence guidance?",
+          "answer": "2 to 4, they can still be considered an owner. [4] and key activities of a club like an owner typically can, can be considered an owner. [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.1905,
+            "context_recall": 0.6667,
+            "context_precision": 0.6
+          },
+          "average": 0.6143,
+          "latency_ms": 148.85,
+          "retrieved": [
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-65",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 65
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-53",
+              "score": 0.030798,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 53
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-11",
+              "score": 0.030366,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 11
+              }
+            },
+            {
+              "id": "legal/football_governance_significant_influence_control_guidance_2025.md::chunk-22",
+              "score": 0.016393,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "football_governance_significant_influence_control_guidance_2025.pdf",
+                "title": "Meaning of Significant Influence or Control in the Context of the Football Governance Act 2025",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/693315275b5198836f30415a/E03461288_Statutory_Guidance_About_the_Meaning_of__Significant_Influence_or_Control__final_accessible_December_2025__1_.pdf",
+                "chunk_index": 22
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-566",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 566
+              }
+            }
+          ]
+        },
+        {
+          "id": "supporters-01",
+          "question": "Which club decisions would require supporter consent under the Fan-Led Review's proposed Golden Share?",
+          "answer": "via a ‘Golden Share’ requiring supporter consent to certain actions by a club. [5] Regulator to require every club to introduce a ‘Golden Share’. [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.15,
+            "context_recall": 0.25,
+            "context_precision": 0.8
+          },
+          "average": 0.55,
+          "latency_ms": 157.61,
+          "retrieved": [
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-807",
+              "score": 0.032522,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 807
+              }
+            },
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-390",
+              "score": 0.031754,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 390
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-563",
+              "score": 0.031025,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 563
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-559",
+              "score": 0.03101,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 559
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-19",
+              "score": 0.03031,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 19
+              }
+            }
+          ]
+        },
+        {
+          "id": "women-03",
+          "question": "What minimum contact-time and salary-floor milestones did the government response support for the top two tiers of women's football?",
+          "answer": "the top five tiers of men’s football and the top two tiers of women’s football. [1] Clubs participating in the top two tiers of women’s football will act as shareholders [2]",
+          "metrics": {
+            "faithfulness": 1.0,
+            "answer_relevance": 0.0,
+            "context_recall": 0.0,
+            "context_precision": 0.2
+          },
+          "average": 0.3,
+          "latency_ms": 135.31,
+          "retrieved": [
+            {
+              "id": "legal/club_football_governance_white_paper_2023.md::chunk-396",
+              "score": 0.032787,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "club_football_governance_white_paper_2023.pdf",
+                "title": "A Sustainable Future: Reforming Club Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63f65d3de90e077bb0c92853/Reform_of_club_football_governance_-_White_Paper.pdf",
+                "chunk_index": 396
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-49",
+              "score": 0.031281,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 49
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-124",
+              "score": 0.030077,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 124
+              }
+            },
+            {
+              "id": "legal/government_response_womens_football_2023.md::chunk-36",
+              "score": 0.029418,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "government_response_womens_football_2023.pdf",
+                "title": "Government Response to the Independent Review of Women's Football",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/656a1e710f12ef070e3e0104/Government_response_to_independent_review_-_reframing_the_opportunity_in_women_s_football.pdf",
+                "chunk_index": 36
+              }
+            },
+            {
+              "id": "legal/fan_led_review_football_governance_2021.md::chunk-723",
+              "score": 0.016129,
+              "retrieval_method": "hybrid",
+              "metadata": {
+                "source": "fan_led_review_football_governance_2021.pdf",
+                "title": "Fan-Led Review of Football Governance",
+                "doc_type": "legal",
+                "url": "https://assets.publishing.service.gov.uk/media/63e4d010d3bf7f05b871200d/Football_Fan_led_Governance_Review_v8Web_Accessible.pdf",
+                "chunk_index": 723
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "threshold_calibration": {
+    "configured_pipeline_threshold": 0.3,
+    "recommended_hash_threshold": 0.215,
+    "balanced_accuracy": 0.7783,
+    "in_domain_top_scores": [
+      {
+        "id": "gov-01",
+        "score": 0.2941
+      },
+      {
+        "id": "gov-02",
+        "score": 0.3001
+      },
+      {
+        "id": "gov-03",
+        "score": 0.3183
+      },
+      {
+        "id": "gov-04",
+        "score": 0.2304
+      },
+      {
+        "id": "gov-05",
+        "score": 0.3266
+      },
+      {
+        "id": "gov-06",
+        "score": 0.1868
+      },
+      {
+        "id": "gov-07",
+        "score": 0.3072
+      },
+      {
+        "id": "safety-01",
+        "score": 0.2666
+      },
+      {
+        "id": "safety-02",
+        "score": 0.2262
+      },
+      {
+        "id": "women-01",
+        "score": 0.3425
+      },
+      {
+        "id": "women-02",
+        "score": 0.2903
+      },
+      {
+        "id": "offside-01",
+        "score": 0.3196
+      },
+      {
+        "id": "offside-02",
+        "score": 0.3188
+      },
+      {
+        "id": "analytics-01",
+        "score": 0.2583
+      },
+      {
+        "id": "analytics-02",
+        "score": 0.26
+      },
+      {
+        "id": "talent-01",
+        "score": 0.2959
+      },
+      {
+        "id": "talent-02",
+        "score": 0.2428
+      },
+      {
+        "id": "injury-01",
+        "score": 0.2303
+      },
+      {
+        "id": "injury-02",
+        "score": 0.3547
+      },
+      {
+        "id": "ownership-01",
+        "score": 0.3846
+      },
+      {
+        "id": "ownership-02",
+        "score": 0.2834
+      },
+      {
+        "id": "supporters-01",
+        "score": 0.2514
+      },
+      {
+        "id": "women-03",
+        "score": 0.3735
+      }
+    ],
+    "out_of_domain_top_scores": [
+      {
+        "query": "How do I bake sourdough bread with a crispy crust?",
+        "score": 0.1891
+      },
+      {
+        "query": "What is the quantum error correction threshold for superconducting qubits?",
+        "score": 0.2039
+      },
+      {
+        "query": "Which treatment is recommended for seasonal allergic rhinitis?",
+        "score": 0.2801
+      },
+      {
+        "query": "How should a spacecraft enter orbit around Mars?",
+        "score": 0.1588
+      },
+      {
+        "query": "What caused the fall of the Western Roman Empire?",
+        "score": 0.3348
+      }
+    ],
+    "note": "Fallback was disabled for A/B isolation; this calibration is diagnostic only."
+  },
+  "limitations": [
+    "Hash embeddings are a reproducibility baseline, not a semantic production model.",
+    "The extractive generator has a faithfulness ceiling effect.",
+    "Lexical proxies may score correct paraphrases lower than a semantic judge would."
+  ]
+}

@@ -1,40 +1,96 @@
-"""
-Task 5 — Semantic search.
+"""Task 5 - cosine semantic search over the Task 4 Chroma collection."""
 
-Embed query bằng chính hàm của Task 4, query ChromaDB và đổi cosine distance
-thành similarity. Output phải theo SearchResult, sort giảm dần và không quá top_k.
-"""
+from __future__ import annotations
 
-from .task4_chunking_indexing import embed_texts, get_collection
+import math
+
+from .contracts import validate_document
+from .task4_chunking_indexing import (
+    _metadata_from_storage,
+    embed_texts,
+    get_collection,
+)
 
 
 def semantic_search(query: str, top_k: int = 10) -> list[dict]:
-    """Trả về dense SearchResult theo score giảm dần."""
-    if not query or not query.strip() or top_k <= 0:
+    """Return unique dense SearchResults ordered by cosine similarity."""
+    if not isinstance(query, str) or not query.strip():
         return []
-    query_vector = embed_texts([query])[0]
-    response = get_collection().query(
-        query_embeddings=[query_vector],
+    if not isinstance(top_k, int) or isinstance(top_k, bool) or top_k <= 0:
+        return []
+
+    query_vectors = embed_texts([query.strip()])
+    if not query_vectors:
+        return []
+
+    collection = get_collection()
+    counter = getattr(collection, "count", None)
+    if callable(counter):
+        try:
+            if counter() == 0:
+                return []
+        except (AttributeError, TypeError, ValueError):
+            pass
+
+    response = collection.query(
+        query_embeddings=[query_vectors[0]],
         n_results=top_k,
         include=["documents", "metadatas", "distances"],
     )
-    results = []
-    for item_id, content, metadata, distance in zip(
-        response["ids"][0],
-        response["documents"][0],
-        response["metadatas"][0],
-        response["distances"][0],
+    if not isinstance(response, dict):
+        return []
+
+    def first_row(name: str) -> list:
+        rows = response.get(name)
+        if not isinstance(rows, list) or not rows:
+            return []
+        return rows[0] if isinstance(rows[0], list) else rows
+
+    ids = first_row("ids")
+    documents = first_row("documents")
+    metadatas = first_row("metadatas")
+    distances = first_row("distances")
+
+    by_id: dict[str, dict] = {}
+    for item_id, content, raw_metadata, distance in zip(
+        ids, documents, metadatas, distances
     ):
-        results.append({
+        if not isinstance(item_id, str) or not item_id.strip():
+            continue
+        if not isinstance(content, str) or not content.strip():
+            continue
+        try:
+            score = 1.0 - float(distance)
+        except (TypeError, ValueError):
+            continue
+        if not math.isfinite(score):
+            continue
+
+        try:
+            metadata = _metadata_from_storage(raw_metadata)
+        except (TypeError, ValueError):
+            continue
+        result = {
             "id": item_id,
             "content": content,
-            "score": max(0.0, 1.0 - float(distance)),
+            "score": score,
             "metadata": metadata,
             "retrieval_method": "dense",
-        })
-    return sorted(results, key=lambda item: item["score"], reverse=True)[:top_k]
+        }
+        try:
+            validate_document(result, require_chunk=True)
+        except ValueError:
+            continue
+        previous = by_id.get(item_id)
+        if previous is None or score > previous["score"]:
+            by_id[item_id] = result
+
+    return sorted(
+        by_id.values(),
+        key=lambda item: (-item["score"], item["id"]),
+    )[:top_k]
 
 
 if __name__ == "__main__":
-    for result in semantic_search("test query", top_k=3):
-        print(result)
+    for search_result in semantic_search("football governance", top_k=3):
+        print(search_result)
