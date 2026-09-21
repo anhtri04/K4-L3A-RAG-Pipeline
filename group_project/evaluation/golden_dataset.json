@@ -1,0 +1,209 @@
+[
+  {
+    "id": "gov-01",
+    "category": "governance",
+    "question": "What are the Independent Football Regulator's three primary objectives?",
+    "expected_answer": "The IFR's three primary objectives are club financial soundness, systemic financial resilience, and safeguarding football heritage.",
+    "expected_context": "The IFR has three primary objectives: club financial soundness, systemic financial resilience, and heritage.",
+    "source_files": ["02_independent_football_regulator_fact_sheet_2024.json"],
+    "evidence_anchors": ["club financial soundness", "systemic financial resilience", "heritage"]
+  },
+  {
+    "id": "gov-02",
+    "category": "governance",
+    "question": "How many English football clubs did the 2023 White Paper expect the regulator to license, and which tiers were covered?",
+    "expected_answer": "All 116 clubs in the top five tiers of the English football pyramid would need a licence to operate as professional men's clubs.",
+    "expected_context": "All 116 clubs in the top five tiers of the English football pyramid would require a licence from the Regulator.",
+    "source_files": ["club_football_governance_white_paper_2023.pdf"],
+    "evidence_anchors": ["all 116 clubs", "top five tiers", "require a licence"]
+  },
+  {
+    "id": "gov-03",
+    "category": "governance",
+    "question": "What three elements make up the strengthened owners' and directors' tests proposed for English football?",
+    "expected_answer": "They comprise a fitness and propriety test for owners and directors, source-of-wealth due diligence for owners, and a requirement for owners to provide robust financial plans.",
+    "expected_context": "The tests contain a fitness and propriety test, enhanced due diligence of owners' source of wealth, and a requirement for robust financial plans from owners.",
+    "source_files": ["club_football_governance_white_paper_2023.pdf", "02_independent_football_regulator_fact_sheet_2024.json"],
+    "evidence_anchors": ["fitness and propriety test", "source of wealth", "robust financial plans"]
+  },
+  {
+    "id": "gov-04",
+    "category": "supporter_rights",
+    "question": "What supporter protections apply when a regulated club wants to change its crest, home shirt colours, or club name?",
+    "expected_answer": "A club must show that a majority of its fanbase in England and Wales supports material changes to its crest or home shirt colours, and it must seek FA approval to change its name.",
+    "expected_context": "Regulated clubs must establish majority fan support for material changes to crests and home shirt colours and seek FA approval for a club-name change.",
+    "source_files": ["02_independent_football_regulator_fact_sheet_2024.json"],
+    "evidence_anchors": ["majority of their fanbase", "club crests and home shirt colours", "approval of the FA"]
+  },
+  {
+    "id": "gov-05",
+    "category": "club_heritage",
+    "question": "On what grounds would the regulator assess a proposed stadium sale or relocation?",
+    "expected_answer": "Approval of a stadium sale is based on financial considerations, while a relocation must also not significantly undermine the club's heritage.",
+    "expected_context": "Approval of a stadium sale will be determined on financial considerations; relocation must not significantly undermine club heritage.",
+    "source_files": ["02_independent_football_regulator_fact_sheet_2024.json"],
+    "evidence_anchors": ["stadium sale", "financial considerations", "not significantly undermine the heritage"]
+  },
+  {
+    "id": "gov-06",
+    "category": "football_finance",
+    "question": "When may the IFR use its backstop power over broadcast-revenue distribution?",
+    "expected_answer": "The IFR may intervene if football fails to reach an industry agreement on revenue distribution and the statutory thresholds for intervention are met.",
+    "expected_context": "The IFR has a targeted backstop power to intervene in broadcast-revenue distribution if football cannot agree, subject to specified thresholds.",
+    "source_files": ["02_independent_football_regulator_fact_sheet_2024.json", "club_football_governance_white_paper_2023.pdf"],
+    "evidence_anchors": ["backstop power", "distribution of broadcast revenue", "fails to reach an agreement"]
+  },
+  {
+    "id": "gov-07",
+    "category": "governance",
+    "question": "Which club competitions can the regulator prevent English clubs from joining?",
+    "expected_answer": "It can prevent clubs from joining breakaway or unlicensed competitions, including a European Super League-style closed competition.",
+    "expected_context": "The regulator can bar English clubs from breakaway competitions or leagues that are not approved or licensed.",
+    "source_files": ["01_football_governance_act_2025.json", "02_independent_football_regulator_fact_sheet_2024.json"],
+    "evidence_anchors": ["breakaway competitions", "European Super League", "approved by the Regulator"]
+  },
+  {
+    "id": "safety-01",
+    "category": "player_safety",
+    "question": "What does the UK grassroots concussion guidance mean by 'Recognise, Remove, Return', and how soon may a suspected player return to sport?",
+    "expected_answer": "People should recognise concussion signs, immediately remove anyone suspected of concussion, and return them gradually to daily activity, education or work, and then sport. No one should return to sport within 24 hours of a suspected concussion.",
+    "expected_context": "Recognise the signs, remove the suspected person immediately, and return safely and gradually; no return to sport within 24 hours.",
+    "source_files": ["03_grassroots_sport_concussion_guidance_2023.json"],
+    "evidence_anchors": ["RECOGNISE the signs", "REMOVE anyone suspected", "no-one should return to sport within 24 hours"]
+  },
+  {
+    "id": "safety-02",
+    "category": "player_safety",
+    "question": "What immediate health advice does the grassroots concussion guidance give after a potential concussion?",
+    "expected_answer": "It recommends calling NHS 111 within 24 hours, resting and sleeping as needed for the first 24 to 48 hours, limiting screen use, and seeking an appropriate healthcare assessment if symptoms persist for more than four weeks.",
+    "expected_context": "Call NHS 111 within 24 hours, rest and sleep during the first 24 to 48 hours, avoid screen time, and obtain assessment if symptoms last over four weeks.",
+    "source_files": ["03_grassroots_sport_concussion_guidance_2023.json"],
+    "evidence_anchors": ["call NHS 111 within 24 hours", "first 24 to 48 hours", "symptoms persist for more than four weeks"]
+  },
+  {
+    "id": "women-01",
+    "category": "womens_football",
+    "question": "What did the Karen Carney review recommend for the Women's Super League and Women's Championship professional environment?",
+    "expected_answer": "It recommended full professionalisation of both leagues, backed by higher minimum operating standards, better physical and mental health provision, elite training facilities, improved parental-care packages, and transition support for players leaving the game.",
+    "expected_context": "The FA and NewCo should fully professionalise the Women's Super League and Women's Championship and improve operating standards, health provision, facilities, parental care, and transition support.",
+    "source_files": ["04_womens_football_standards_blueprint_2023.json"],
+    "evidence_anchors": ["full professionalisation", "physical and mental health provision", "parental care packages"]
+  },
+  {
+    "id": "women-02",
+    "category": "womens_football",
+    "question": "What new grassroots investment was announced to prioritise women's and girls' football teams?",
+    "expected_answer": "The government announced £30 million with the FA to build about 30 new state-of-the-art 3G pitches and accompanying facilities prioritising women's and girls' teams in England.",
+    "expected_context": "A £30 million investment with the FA would build approximately 30 new 3G pitches and facilities prioritising women's and girls' teams.",
+    "source_files": ["04_womens_football_standards_blueprint_2023.json"],
+    "evidence_anchors": ["£30 million", "approximately 30", "3G pitches"]
+  },
+  {
+    "id": "offside-01",
+    "category": "refereeing_research",
+    "question": "What error rates did the offside study observe below and above a 40-degree visual angle?",
+    "expected_answer": "Eleven percent of calls were erroneous below 40 degrees, compared with 30 percent above 40 degrees. Overall, 49 of 355 coded calls were errors, a 14 percent error rate.",
+    "expected_context": "The study found 33 of 302 calls (11%) erroneous below 40 degrees and 16 of 53 (30%) erroneous above 40 degrees; 49 of 355 calls were errors overall.",
+    "source_files": ["05_offside_calls_research_2017.json"],
+    "evidence_anchors": ["49 errors", "11% of calls", "30%", "visual angle"]
+  },
+  {
+    "id": "offside-02",
+    "category": "refereeing_research",
+    "question": "Why did the offside study suggest assistant referees could sometimes make fewer errors when farther from the players?",
+    "expected_answer": "Greater distance can make the relevant players subtend a smaller visual angle, allowing the assistant referee to attend to them simultaneously more easily.",
+    "expected_context": "A more distant vantage point reduces the visual angle between relevant players and may make simultaneous attention, and therefore the call, easier.",
+    "source_files": ["05_offside_calls_research_2017.json"],
+    "evidence_anchors": ["further away from the action", "smaller visual angle", "attend to the relevant players simultaneously"]
+  },
+  {
+    "id": "analytics-01",
+    "category": "football_analytics",
+    "question": "Which event-sequence length gave the best validation performance in the improved xG study, and what were its scores?",
+    "expected_answer": "The best validation model used three events—the shot and two preceding events—and achieved mean ROC-AUC 0.833 with mean Brier score 0.166.",
+    "expected_context": "Three events, consisting of the shot and two preceding events, produced the highest mean validation ROC-AUC of 0.833 and lowest mean Brier score of 0.166.",
+    "source_files": ["06_expected_goals_models_2024.json"],
+    "evidence_anchors": ["three events", "ROC-AUC of 0.833", "brier score of 0.166"]
+  },
+  {
+    "id": "analytics-02",
+    "category": "football_analytics",
+    "question": "Which attacking sequences did the improved xG model associate with better scoring chances?",
+    "expected_answer": "Higher-value chances were built from the sides of the goal inside the opposition's 18-yard box, followed by shots from in front of goal; successful passes across goal to the far post were more effective than near-post passes.",
+    "expected_context": "High-xG sequences used short passes from the sides of the 18-yard box, shots close and in front of goal, and passes across goal to the far post.",
+    "source_files": ["06_expected_goals_models_2024.json"],
+    "evidence_anchors": ["sides of the goal", "within the 18-yard box", "far post"]
+  },
+  {
+    "id": "talent-01",
+    "category": "talent_development",
+    "question": "How many studies were included in the soccer perceptual-cognitive scoping review, and what main themes did it identify?",
+    "expected_answer": "The review included 55 studies and identified visual-search behaviours, cognitive capabilities, performance, and methodologies as its main themes.",
+    "expected_context": "Fifty-five studies were included; narrative analysis identified visual search behaviours, cognitive capabilities, performance, and methodologies.",
+    "source_files": ["07_soccer_talent_development_review_2025.json"],
+    "evidence_anchors": ["55 studies", "visual search behaviours", "cognitive capabilities", "methodologies"]
+  },
+  {
+    "id": "talent-02",
+    "category": "talent_development",
+    "question": "How does the review define scanning in soccer, and which positive performance outcomes are linked to it?",
+    "expected_answer": "Scanning is an active head movement away from the ball to gather information before engaging with it. Greater or better-timed scanning is linked with forward movement, body orientation, successful and more impactful passes, and turning out of pressure.",
+    "expected_context": "Scanning is an active head movement away from the ball to collect information; live competition research links it to forward movement, body orientation, successful passes, and turns out of pressure.",
+    "source_files": ["07_soccer_talent_development_review_2025.json"],
+    "evidence_anchors": ["active head movement away from the ball", "successful and more impactful passes", "turns out of pressure"]
+  },
+  {
+    "id": "injury-01",
+    "category": "injury_analytics",
+    "question": "What players, observation period, training sessions, and injuries formed the injury-forecasting study dataset?",
+    "expected_answer": "The study followed 26 Italian professional male players for 23 weeks, recording 931 individual training sessions and 23 non-contact injuries.",
+    "expected_context": "Twenty-six Italian professional male players were monitored for 23 weeks; researchers recorded 931 individual training sessions and 23 non-contact injuries.",
+    "source_files": ["08_soccer_injury_forecasting_ml_2018.json"],
+    "evidence_anchors": ["twenty-six Italian professional male players", "23 weeks", "931 individual training sessions", "23 non-contact injuries"]
+  },
+  {
+    "id": "injury-02",
+    "category": "injury_analytics",
+    "question": "What precision and recall did the decision-tree injury forecaster achieve on the injury class?",
+    "expected_answer": "The decision tree achieved recall of 0.80 ± 0.07 and precision of 0.50 ± 0.11 on the injury class.",
+    "expected_context": "Across 10,000 cross-validation tasks, the decision tree had injury-class recall 0.80 ± 0.07 and precision 0.50 ± 0.11.",
+    "source_files": ["08_soccer_injury_forecasting_ml_2018.json"],
+    "evidence_anchors": ["recall = 0.80", "precision = 0.50", "injury class"]
+  },
+  {
+    "id": "ownership-01",
+    "category": "ownership_law",
+    "question": "Which formal ownership thresholds are listed in Schedule 1 guidance under the Football Governance Act 2025?",
+    "expected_answer": "A person is an owner if, among other conditions, they directly or indirectly hold more than 25 percent of club shares, more than 25 percent of voting rights, or the right to appoint or remove a club officer.",
+    "expected_context": "Schedule 1 includes ownership conditions of more than 25% of shares, more than 25% of voting rights, and a right to appoint or remove an officer.",
+    "source_files": ["football_governance_significant_influence_control_guidance_2025.pdf"],
+    "evidence_anchors": ["more than 25% of the shares", "more than 25% of the voting rights", "appoint or remove an officer"]
+  },
+  {
+    "id": "ownership-02",
+    "category": "ownership_law",
+    "question": "Can someone with less than 25 percent of a club still be treated as an owner under the significant-influence guidance?",
+    "expected_answer": "Yes. A person can be treated as an owner when their actual influence or control is comparable to ownership—for example, if they can direct minority shareholders so their combined votes control club activity—even without meeting the formal shareholding thresholds.",
+    "expected_context": "Conditions 1 and 5 capture de facto owners whose influence is comparable to formal ownership; an individual below 25% may still direct other minority shareholders and control club decisions.",
+    "source_files": ["football_governance_significant_influence_control_guidance_2025.pdf"],
+    "evidence_anchors": ["shareholding of less than 25%", "instruct other minority shareholders", "significant influence or control"]
+  },
+  {
+    "id": "supporters-01",
+    "category": "supporter_rights",
+    "question": "Which club decisions would require supporter consent under the Fan-Led Review's proposed Golden Share?",
+    "expected_answer": "Supporter consent would be required to sell the stadium, permanently relocate outside the local area, join a competition not affiliated to FIFA, UEFA and the FA, or change the badge, club name, or first-team home colours.",
+    "expected_context": "The Golden Share covers stadium sale, permanent relocation outside the local area, unaffiliated competitions, and changes to the badge, name, or first-team home colours.",
+    "source_files": ["fan_led_review_football_governance_2021.pdf"],
+    "evidence_anchors": ["Golden Share", "selling the club stadium", "changing the club badge", "first team home colours"]
+  },
+  {
+    "id": "women-03",
+    "category": "womens_football",
+    "question": "What minimum contact-time and salary-floor milestones did the government response support for the top two tiers of women's football?",
+    "expected_answer": "It supported phasing Women's Championship contact time up to 20 hours, matching the WSL by 2027–28, plus a WSL salary floor in licensing from 2025–26 and a Championship salary floor once revenues allow.",
+    "expected_context": "The Championship should reach 20 hours minimum contact time by 2027–28; a WSL salary floor should start in 2025–26 and later extend to the Championship when revenues allow.",
+    "source_files": ["government_response_womens_football_2023.pdf"],
+    "evidence_anchors": ["minimum contact time of 20 hours", "2027-28 season", "salary floor", "2025-26 season"]
+  }
+]

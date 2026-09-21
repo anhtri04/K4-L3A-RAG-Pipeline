@@ -17,7 +17,7 @@
 | Generator model | `src/task10_generation.py` qua OpenAI-compatible API (`LLM_PROVIDER`/`LLM_MODEL` trong `.env`); safe refusal khi thiếu evidence |
 | Embedding model | `BAAI/bge-m3` 1024 dims mặc định (`EMBEDDING_MODEL`/`EMBEDDING_DIM`), dùng chung `embed_texts()` cho index và query; hỗ trợ LM Studio/OpenAI-compatible |
 | Corpus version/commit | Nhánh `anhtri_lead` tại `5d9f626`; Task 2 crawl 6 URL bóng đá (luật việt vị, chiến thuật, VAR, IFAB, Premier League, FIFA) về `data/landing/news/` |
-| Golden dataset size | 0 trên nhánh này (`group_project/evaluation/golden_dataset.json` còn trống) — cần bổ sung ≥ 15 cases |
+| Golden dataset size | 23 — reuse từ nhánh `TranCaoThang-2A202602520` (đủ `question`/`expected_answer`/`expected_context` + `id`/`source_files`/`evidence_anchors`) |
 | `top_k` | 5 mặc định (`DEFAULT_TOP_K`/`TOP_K`; UI cho chỉnh 3–10) |
 | Fallback threshold and calibration | `SCORE_THRESHOLD=0.3`, so với cosine score gốc của dense (không so với điểm RRF); RRF `k=60`; fallback PageIndex khi dưới ngưỡng, trả hybrid thay vì crash khi fallback lỗi |
 
@@ -39,8 +39,8 @@ cấp nhóm (xem `reports/RESULT.md` trên `main`):
 - Run 2 (Ragas, 15 câu): Config B hơn Config A ở recall +0.13, precision +0.08, relevance +0.07, faithfulness +0.06.
 
 Việc cần làm trên nhánh này: port `src/evaluate_rag.py` từ nhánh Thắng (hoặc
-chạy Ragas như nhánh Trí) với golden ≥ 15 cases rồi thay bảng này bằng số run
-của nhánh.
+chạy Ragas như nhánh Trí) với golden 23 cases đã reuse rồi thay bảng này bằng
+số run của nhánh.
 
 ## A/B comparison
 
@@ -64,7 +64,7 @@ Nhóm failure này củng cố quyết định giữ fallback + safe refusal tro
 
 | Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
 | -------: | --- | --- | --- | --- |
-| 1 | Bổ sung golden ≥ 15 cases + port evaluator về nhánh rồi chạy A/B của nhánh | `golden_dataset.json` trống, chưa có `src/evaluate_rag.py` trên nhánh | Có số đo riêng, hết phụ thuộc run nhánh khác | `pytest tests/test_acceptance.py -q` qua `test_golden_dataset_has_15_grounded_cases` |
+| 1 | Port evaluator về nhánh rồi chạy A/B của nhánh | Golden đã reuse (23 cases); còn thiếu `src/evaluate_rag.py` trên nhánh | Có số đo riêng, hết phụ thuộc run nhánh khác | `pytest tests/test_acceptance.py -q` qua `test_golden_dataset_has_15_grounded_cases` |
 | 2 | Cài dev deps rồi rerun contract tests (`pip install -e ".[dev]"`, `pytest -q`) | Môi trường hiện tại thiếu `pytest` | Xác nhận chữ ký/schema Task 4–10 còn giữ | Toàn bộ `test_contracts.py` xanh |
 | 3 | Chunking heading-aware / parent-child cho PDF dài | Evidence bị cắt ở chunk 500 ký tự (cả 2 run nhóm) | Tăng recall, passage trích mạch lạc | So recall/precision theo case legal trước/sau |
 

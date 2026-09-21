@@ -43,8 +43,8 @@ tôi không nhận là tác giả các phần đó (chi tiết hợp nhất ở 
 
 ## Điều còn hạn chế
 
-- Nhánh này chưa có golden dataset riêng (`group_project/evaluation/golden_dataset.json` còn trống) và chưa có script evaluator riêng nên chưa có run A/B độc lập — số liệu A/B chính thức nằm ở báo cáo hợp nhất trên `main` (Run 1: deterministic 23 câu; Run 2: Ragas 15 câu, cả hai đều kết luận hybrid+RRF tốt hơn).
-- Nếu có thêm thời gian, việc đầu tiên tôi làm là port `src/evaluate_rag.py` từ nhánh Thắng (hoặc chạy Ragas như nhánh Trí) trên chính corpus đã convert của nhánh này, bổ sung golden ≥15 cases, rồi cập nhật `group_project/evaluation/RESULT.md` bằng run của nhánh.
+- Nhánh này đã reuse golden 23 cases từ nhánh Thắng (`group_project/evaluation/golden_dataset.json`) nhưng chưa có script evaluator riêng nên chưa có run A/B độc lập — số liệu A/B chính thức nằm ở báo cáo hợp nhất trên `main` (Run 1: deterministic 23 câu; Run 2: Ragas 15 câu, cả hai đều kết luận hybrid+RRF tốt hơn).
+- Nếu có thêm thời gian, việc đầu tiên tôi làm là port `src/evaluate_rag.py` từ nhánh Thắng (hoặc chạy Ragas như nhánh Trí) trên chính corpus đã convert của nhánh này rồi cập nhật `group_project/evaluation/RESULT.md` bằng run của nhánh.
 
 ## Xác nhận đóng góp
 

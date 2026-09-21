@@ -1,7 +1,8 @@
 # RAG evaluation results (nhánh `anhtri_lead` — Nguyễn Anh Trí, 2A202602730)
 
-> Trạng thái nhánh (21/09/2026): pipeline Task 1–10 + UI đã xong; golden dataset
-> và evaluator riêng của nhánh chưa có nên chưa có run A/B độc lập tại đây.
+> Trạng thái nhánh (21/09/2026): pipeline Task 1–10 + UI đã xong; golden 23 cases
+> đã reuse từ nhánh `TranCaoThang-2A202602520`; evaluator riêng của nhánh chưa có
+> nên chưa có run A/B độc lập tại đây.
 > Số liệu A/B chính thức của nhóm nằm ở `reports/RESULT.md` trên `main`
 > (Run 1 deterministic 23 câu, Run 2 Ragas 15 câu — cả hai kết luận hybrid + RRF
 > tốt hơn). File này sẽ được thay bằng số run của nhánh ngay khi golden +
@@ -17,7 +18,7 @@
 | Generator model | `src/task10_generation.py` qua OpenAI-compatible API; safe refusal khi thiếu evidence |
 | Embedding model | `BAAI/bge-m3` 1024 dims mặc định, dùng chung `embed_texts()` |
 | Corpus version/commit | Nhánh `anhtri_lead` tại `5d9f626` (Task 2: 6 URL bóng đá về `data/landing/news/`) |
-| Golden dataset size | 0 (cần bổ sung tối thiểu 15 cases có `question`, `expected_answer`, `expected_context`) |
+| Golden dataset size | 23 (reuse từ nhánh `TranCaoThang-2A202602520`; mỗi case có `question`, `expected_answer`, `expected_context`) |
 | `top_k` | 5 (UI chỉnh 3–10) |
 | Fallback threshold and calibration | `SCORE_THRESHOLD=0.3` trên cosine gốc của dense; RRF `k=60`; fallback PageIndex, trả hybrid khi fallback lỗi |
 
@@ -65,7 +66,7 @@ vơ thành run của nhánh.
 
 | Priority | Action | Evidence from failure analysis | Expected impact | How to verify |
 | -------: | --- | --- | --- | --- |
-| 1 | Bổ sung golden ≥ 15 cases + evaluator cho nhánh | Golden trống, thiếu `src/evaluate_rag.py` | Có run A/B riêng | `test_golden_dataset_has_15_grounded_cases` xanh |
+| 1 | Port evaluator về nhánh rồi chạy A/B riêng | Golden đã reuse (23 cases); còn thiếu `src/evaluate_rag.py` | Có run A/B riêng | `test_golden_dataset_has_15_grounded_cases` xanh (golden đã đạt) + run evaluator mới |
 | 2 | `pip install -e ".[dev]"` rồi `pytest -q` | Môi trường thiếu `pytest` | Xác nhận contracts Task 4–10 | `test_contracts.py` xanh |
 | 3 | Chunking heading-aware / parent-child | Evidence bị cắt ở chunk 500 ký tự | Tăng recall legal | So recall trước/sau theo case |
 
