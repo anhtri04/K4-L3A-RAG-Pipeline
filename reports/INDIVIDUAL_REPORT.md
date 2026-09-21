@@ -1,12 +1,22 @@
 # Individual contribution report
 
-Mỗi thành viên copy template này thành:
+> Đây là repo hợp nhất (unified). File này chỉ là template — đừng điền trực
+> tiếp vào đây. Mỗi thành viên làm trên nhánh cá nhân của mình và nộp báo cáo
+> riêng theo quy ước `reports/<mssv>-<short-name>.md`. Xem bảng nhánh dưới đây
+> và chi tiết trong `TEAMMATES.md`.
 
-```text
-reports/<student-id>-<short-name>.md
-```
+## Báo cáo theo nhánh cá nhân
 
-Giới hạn khuyến nghị: 1 trang, không chép lại README hoặc mô tả lý thuyết chung. Báo cáo không phải một bài pipeline cá nhân; mục đích là ghi nhận ownership và bằng chứng đóng góp trong sản phẩm nhóm.
+| # | Họ tên | MSSV | Nhánh | Báo cáo cá nhân |
+|---|--------|------|-------|-----------------|
+| 1 | Trần Cao Thắng | 2A202602520 | `TranCaoThang-2A202602520` | `reports/2A202602520-tran-cao-thang.md` (đã có trên nhánh cá nhân, chưa merge `main`) |
+| 2 | Võ Đức Trí | 2A202602603 | `tri` | `reports/2A202602603-vo-duc-tri.md` (cần tạo trên nhánh `tri`) |
+| 3 | Đỗ Hoàng Nam Khánh | 2A202602423 | `khanh` | `reports/2A202602423-do-hoang-nam-khanh.md` (cần tạo trên nhánh `khanh`) |
+| 4 | Phạm Minh Cương | 2A202602825 | `pmcnb` | `reports/2A202602825-pham-minh-cuong.md` (cần tạo trên nhánh `pmcnb`) |
+| 5 | Nguyễn Anh Trí | 2A202602730 | `anhtri_lead` | `reports/2A202602730-nguyen-anh-tri.md` (làm trên nhánh `anhtri_lead`) |
+
+Kiểm tra nhanh: `git branch -a` phải thấy `main`, `anhtri_lead`,
+`TranCaoThang-2A202602520`, `tri`, `khanh`, `pmcnb` (cả local và `origin/`).
 
 ---
 
